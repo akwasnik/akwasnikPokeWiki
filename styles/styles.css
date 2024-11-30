@@ -1,6 +1,6 @@
 @font-face {
   font-family: "PokemonName";
-  src: url(/laby/lab01/src/assets/fonts/PokemonName.ttf);
+  src: url(/src/assets/fonts/PokemonName.ttf);
 }
 body {
   margin: auto;

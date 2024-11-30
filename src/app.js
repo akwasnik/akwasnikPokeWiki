@@ -31,9 +31,9 @@ async function fetchPokemonList(){
     }catch(error){
         document.body.innerHTML = `
             <div class="fetch--error">
-                <img src="/laby/lab01/src/assets/images/error-pokeball.png" alt="" width="100" height="100">
+                <img src="/src/assets/images/error-pokeball.png" alt="" width="100" height="100">
                 <h1>${error.message}</h1>
-                <img src="/laby/lab01/src/assets/images/error.png" alt="" width="100" height="100">
+                <img src="/src/assets/images/error.png" alt="" width="100" height="100">
             </div>
         `;
     }
@@ -58,9 +58,9 @@ async function fetchPokemonDetails(url){
     }catch(error){
         detailsContainer.innerHTML = `
             <div class="fetch--error">
-                <img src="/laby/lab01/src/assets/images/error-pokeball.png" alt="" width="100" height="100">
+                <img src="/src/assets/images/error-pokeball.png" alt="" width="100" height="100">
                 <h1>${error.message}</h1>
-                <img src="/laby/lab01/src/assets/images/error.png" alt="" width="100" height="100">
+                <img src="/src/assets/images/error.png" alt="" width="100" height="100">
             </div>
         `
     }
@@ -132,11 +132,11 @@ function displayPokemonDetails(pokemonDetails){
 }
 
 document.getElementById('search-form').addEventListener('submit', (event) => {
-    event.preventDefault();  // Zapobiega przeładowaniu strony
+    event.preventDefault();
 
-    const pokemonName = document.getElementById('search-input').value;  // Pobiera wartość z inputa
+    const pokemonName = document.getElementById('search-input').value;
     if (pokemonName) {
-        fetchPokemonDetails(getPokemonUrl(pokemonName));  // Uruchamia funkcję z podanym argumentem
+        fetchPokemonDetails(getPokemonUrl(pokemonName));
     } else {
         alert("No pokemon name given...")
     }
